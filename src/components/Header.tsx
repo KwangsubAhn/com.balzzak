@@ -1,10 +1,8 @@
-import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Image, Layout, Menu, Typography } from 'antd';
+import { Image, Layout, Menu } from 'antd';
 
 import './Header.less';
 
-const { Title } = Typography;
 export const HEADER_HEIGHT = 90;
 
 const menuItems = [

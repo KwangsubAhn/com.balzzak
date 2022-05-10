@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Root from './Root';
 import Home from './pages/Home';
@@ -15,7 +15,7 @@ const MyRouter = () => {
                     <Route path={'/'} element={<Home />} />
                     <Route path={'/menu'} element={<Menu />} />
                     <Route path={'/franchise'} element={<Franchise />} />
-                    <Route path={'/about'} element={<About />} />
+                    <Route path={'/about'} element={<About />} />       
                 </Routes>
             </Root>
         </BrowserRouter>
