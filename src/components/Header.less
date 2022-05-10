@@ -1,5 +1,4 @@
 .header-container {
-    height: 90px;
     background-color: @background-color;
     display: flex;
     justify-content: space-between;
@@ -10,7 +9,17 @@
         background-color: inherit;
         flex: 1;
     }
+    .ant-menu-item-selected {
+        color: rgba(0, 0, 0, 0.85) !important;
+    }
     .ant-menu-item {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+    }
+    .ant-menu-title-content {
+        font-size: 16px;
+        font-weight: 600;
         min-width: 100px;
         text-align: center;
     }

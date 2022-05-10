@@ -5,6 +5,7 @@ import { InstagramOutlined, MailOutlined } from '@ant-design/icons';
 import './Footer.less';
 
 const { Text, Paragraph, Link } = Typography;
+export const FOOTER_HEIGHT = 210;
 
 function Footer() {
     const [isModalPrivacy, setIsModalPrivacy] = useState(false);
@@ -24,7 +25,7 @@ function Footer() {
     }
 
     return (
-        <div className='footer-container'>
+        <div className='footer-container' style={{ height: FOOTER_HEIGHT }}>
             <div className='footer-div1'>
                 <div className='footer-div1-text'>
                     <Link onClick={() => { setIsModalPrivacy(true); }}>개인정보처리방침</Link> <Text>|</Text> <Link onClick={setModalEmail}>이메일 무단수집거부</Link>
