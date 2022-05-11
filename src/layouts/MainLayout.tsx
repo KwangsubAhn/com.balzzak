@@ -9,7 +9,7 @@ function MainLayout(props: any) {
     return (
         <Layout>
             <Header />
-            <Content style={{ minHeight: 'calc(100vh - 300px)', paddingLeft: 50, paddingRight: 50 }}>
+            <Content style={{ minHeight: 'calc(100vh - 300px)' }}>
                 { children }
             </Content>
             <Footer />

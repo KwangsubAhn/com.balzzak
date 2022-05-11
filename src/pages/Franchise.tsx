@@ -1,8 +1,10 @@
+import BodyContainer from "../components/BodyContainer";
+
 function Franchise() {
     return (
-        <div>
+        <BodyContainer>
             franchise
-        </div>
+        </BodyContainer>
     );
 }
 

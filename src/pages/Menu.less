@@ -1,0 +1,20 @@
+@import '../variable.less';
+
+.menu-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .mobile-menu {
+        display: none;
+    }
+
+    @media @phone {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        .pc-menu {
+            display: none;
+        }
+        .mobile-menu {
+            display: block;
+        }
+    }
+}
