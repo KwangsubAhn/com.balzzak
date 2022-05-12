@@ -1,3 +1,5 @@
+@import '../variable.less';
+
 .footer-container {
     background-color: @quinary-color;
     padding: 50px;
@@ -34,5 +36,29 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+    }
+    @media @phone {
+        padding: 20px;
+        .footer-div1 {
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-div2 {
+            flex-direction: column;
+            align-items: center;
+            .ant-typography {
+                text-align: center;
+            }
+        }
+        
+    }
+}
+
+@media @phone {
+    .footer-modal1 {
+        width: 100vw;
+    }
+    .footer-modal2 {
+        width: 100vw;
     }
 }

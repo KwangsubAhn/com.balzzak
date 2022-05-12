@@ -13,6 +13,7 @@ function Footer() {
     const setModalEmail = () => {
         Modal.info({
             title: '이메일무단수집거부',
+            wrapClassName: 'footer-modal2',
             content: (
             <Paragraph>
                 발짝 웹사이트 이용자에게 무차별적으로 보내지는 타사의 메일을 차단하기 위해,
@@ -56,7 +57,7 @@ function Footer() {
                         <Text style={{ color: '#fff' }}>OK</Text>
                     </Button>
                 ]}
-                width={'85%'}
+                wrapClassName='footer-modal1'
                 bodyStyle={{ height: '60vh', overflowY: 'scroll' }}
             >
                 <Paragraph>발짝은 이용자들의 개인정보보호를 중요시하며, 이용자가 회사의 서비스를 이용함과 동시에 온라인상에서 회사에 제공한 개인정보가 보호 받을 수 있도록 최선을 다하고 있습니다. 이에 회사는 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에관한 법률 등 정보통신서비스 제공자가 준수하여야 할 관련 법규상의 개인정보보호 규정 및정보통신부가 제정한 개인정보보호지침을 준수하고 있습니다. 회사는 개인정보 취급방침을 통하여이용자들이 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해어떠한 조치가 취해지고 있는지 알려 드립니다</Paragraph>
@@ -96,26 +97,6 @@ function Footer() {
                     발짝은 서비스 향상을 위해서 귀하의 개인정보를 어떠한 업체에도 제공하지 않습니다.<br />
                     - 개인정보의 처리를 위탁하거나 제공하는 경우에는 수탁자, 수탁범위, 공유 정보의 범위 등에 관한 사항을 서면, 전자우편, 전화 또는 홈페이지를 통해 미리 귀하에게 고지합니다.
                 </Paragraph>
-            </Modal>
-            <Modal 
-                title="이메일무단수집거부"
-                visible={isModalEmail}
-                onCancel={() => { setIsModalEmail(false); }}
-                footer={[
-                    <Button onClick={() => { setIsModalEmail(false); }}>
-                        <Text>확인</Text>
-                    </Button>
-                ]}
-                width={'85%'}
-                bodyStyle={{ height: '60vh', overflowY: 'scroll' }}
-            >
-                <Paragraph>
-                    발짝 웹사이트 이용자에게 무차별적으로 보내지는 타사의 메일을 차단하기 위해,
-                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여
-                    무단으로 수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.
-                </Paragraph>
-                
-                
             </Modal>
         </div>
     );
