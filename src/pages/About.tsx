@@ -1,5 +1,5 @@
 import { Typography, Row, Col, Image } from 'antd';
-import { ClockCircleOutlined } from '@ant-design/icons';
+import { ClockCircleOutlined, PhoneOutlined } from '@ant-design/icons';
 
 import './About.less';
 import BodyContainer from '../components/BodyContainer';
@@ -36,7 +36,7 @@ function About() {
                             </div>
                             <div className='about-sub-container'>
                                 <div className='about-subtitle'>
-                                    <ClockCircleOutlined />
+                                    <PhoneOutlined />
                                     <Text>연락처</Text>
                                 </div>
                                 <div className='about-sub-content'>

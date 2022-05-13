@@ -1,8 +1,18 @@
+@import '../variable.less';
+
 .header-container {
+    height: @header-height;
     background-color: @background-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .header-pc-view {
+        display: block;
+        width: -webkit-fill-available;
+    }
+    .header-mobile-view {
+        display: none;
+    }
     .ant-menu {
         display: flex;
         justify-content: flex-end;
@@ -22,5 +32,16 @@
         font-weight: 600;
         min-width: 100px;
         text-align: center;
+    }
+    @media @phone {
+        height: @header-mobile-height;
+        padding: 0 20px;
+        .header-pc-view {
+            display: none;
+        }
+        .header-mobile-view {
+            display: flex;
+            align-items: center;
+        }
     }
 }
