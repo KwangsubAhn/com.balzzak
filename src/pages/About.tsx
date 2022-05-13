@@ -10,7 +10,7 @@ function About() {
         <BodyContainer>
             <div className='about-container'>
                 <Row>
-                    <Col span={10}>
+                    <Col sm={10} xs={24}>
                         <div style={{ textAlign: 'center' }}>
                             <div>
                                 <Title className='about-title' level={2}>Welcome to <Text className='clr-pri'>발</Text><Text className='clr-sec'>짝</Text>.</Title>
@@ -18,6 +18,17 @@ function About() {
                                     <Text>건강하고 맛있는 안주가 가득한 퓨전술집</Text><br />
                                     <Text><b>대표메뉴</b>: 먹태, 짝태, 건어물, 닭발, 직화요리, 떡볶이, 파스타</Text>
                                 </Paragraph>
+                            </div>
+                            <div className='about-sub-container'>
+                                <div className='about-subtitle'>
+                                    <PhoneOutlined />
+                                    <Text>연락처</Text>
+                                </div>
+                                <div className='about-sub-content'>
+                                    <Text>서울특별시 중랑구 중랑역로 73</Text>
+                                    <Link href='tel:02-493-0110' style={{ color: 'inherit' }}>02-493-0110</Link>
+                                    <Link href='mailto: conex2@naver.com' target="_blank" style={{ color: 'inherit' }}>conex2@naver.com</Link>
+                                </div>
                             </div>
                             <div className='about-sub-container'>
                                 <div className='about-subtitle'>
@@ -34,22 +45,11 @@ function About() {
                                     <Text>일 17:00 - 02:00</Text>
                                 </div>
                             </div>
-                            <div className='about-sub-container'>
-                                <div className='about-subtitle'>
-                                    <PhoneOutlined />
-                                    <Text>연락처</Text>
-                                </div>
-                                <div className='about-sub-content'>
-                                    <Text>서울특별시 중랑구 중랑역로 73</Text>
-                                    <Link href='tel:02-493-0110' style={{ color: 'inherit' }}>02-493-0110</Link>
-                                    <Link href='mailto: conex2@naver.com' target="_blank" style={{ color: 'inherit' }}>conex2@naver.com</Link>
-                                </div>
-                            </div>
                         </div>
                     </Col>
-                    <Col span={14}>
-                        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            <div style={{ textAlign: 'right', paddingRight: 30, display: 'flex', alignItems: 'center' }}>
+                    <Col sm={14} xs={24}>
+                        <div className='about-photo'>
+                            <div className='about-photo-left'>
                                 <Image 
                                     preview={false}
                                     width={380} 
@@ -57,7 +57,7 @@ function About() {
                                 />  
                                 {/* <Image width={350} src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak-menu1.jpg" />   */}
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <div className='about-photo-right'>
                                 <Image width={300} preview={false} src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/balzzak-menu2.jpg" />  
                             </div>
                         </div>

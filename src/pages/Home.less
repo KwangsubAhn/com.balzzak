@@ -10,3 +10,44 @@
         margin-top: 0;
     }
 }
+
+.home-container {
+    .home-intro-restaurant {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .home-intro-restaurant-col1 {
+            display: flex;
+            justify-content: center;
+            > div {
+                margin-left: 10px;
+                margin-right: 10px;
+                position: relative;
+                > span {
+                    position: absolute;
+                    font-size: 28px;
+                    left: 28px;
+                    bottom: 28px;
+                    color: white;
+                }
+            }
+        }
+    }
+    @media @phone {
+        .home-intro-restaurant {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .home-intro-restaurant-col1 {
+                > div {
+                    > span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .home-balzzak-system {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}

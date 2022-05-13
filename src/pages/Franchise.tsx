@@ -3,7 +3,7 @@ import BodyContainer from "../components/BodyContainer";
 function Franchise() {
     return (
         <BodyContainer>
-            franchise
+            가맹문의 - To be implemented
         </BodyContainer>
     );
 }
