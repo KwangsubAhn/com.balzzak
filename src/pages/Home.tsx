@@ -1,4 +1,4 @@
-import { Button, Carousel, Col, Image, Row, Typography } from "antd";
+import { Button, Carousel, Col, Image, Modal, Row, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 import BodyContainer from "../components/BodyContainer";
@@ -14,16 +14,19 @@ function Home() {
             <div className='home-carousel'>
                 <Carousel>
                     <Image 
-                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/slide-image.jpeg" 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home1_min.jpg" 
                         preview={false}
+                        width='100%'
                     />
                     <Image 
-                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/slide-2.jpeg" 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home2_min.jpg" 
                         preview={false}
+                        width='100%'
                     />
                     <Image 
-                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/slide-3.jpeg" 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home3_min.jpg" 
                         preview={false}
+                        width='100%'
                     />
                 </Carousel>
             </div>
@@ -31,39 +34,37 @@ function Home() {
                 <div className='home-container'>
                     <Row className='home-intro-restaurant'>
                         <Col xs={24} sm={16} className='home-intro-restaurant-col1' >
-                            <div>
+                            <div onClick={() => { navigate('/balzzak-story'); }}>
                                 <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise1.jpeg" 
+                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise1_min.jpg" 
                                     preview={false}
                                 />
-                                <Text>
-                                    점주인터뷰
-                                </Text>
+                                <Text>발짝스토리</Text>
                             </div>
-                            <div>
+                            <div onClick={() => { navigate('/featured-menu'); }}>
                                 <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise2.jpeg" 
+                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise2_min.jpg" 
                                     preview={false}
                                 />
-                                <Text>
-                                    회사소개
-                                </Text>
+                                <Text>대표메뉴</Text>
                             </div>
-                            <div>
+                            <div onClick={() => { Modal.info({ content: '[선착순 전수창업 10호점까지 전수비 반값]' }); }}>
                                 <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise3.jpeg" 
+                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise3_min.jpg" 
                                     preview={false}
                                 />
-                                <Text>
-                                    가맹점특전
-                                </Text>
+                                <Text>창업이벤트</Text>
                             </div>
                         </Col>
                         <Col xs={24} sm={8} style={{ display: 'flex', alignItems: 'center' }}>
                             <div className='home-balzzak-system'>
-                                <Paragraph>Balzzak System</Paragraph>
-                                <Title style={{ marginTop: 0 }}>성공창업포인트</Title>
-                                <Paragraph>프랜차이즈 창업의 성공 여부는 바로 시스템!<br />발짝만의 특별한 성공창업시스템을 만나보세요.</Paragraph>
+                                <Title style={{ marginTop: 0 }}>발짝 전수창업 안내</Title>
+                                <Paragraph>
+                                    누구나 쉽게 따라할수있는 초간단 레시피와<br />
+                                    1인매장부터 오토매장까지 일하기좋은 시스템 구축<br />
+                                    운영노하우및 경험까지 모두 전수하여<br />
+                                    성장지속 가능한 알짜매장의 창업자의 취향에따라 맟춤가게 창업<br />
+                                </Paragraph>
                                 <Button type="primary" size={'large'} onClick={() => { navigate('/franchise'); }}>
                                     자세히 보기
                                 </Button>

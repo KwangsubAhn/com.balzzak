@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Drawer, Image, Layout, Menu } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
+import { Drawer, Image, Layout, Menu, Typography } from 'antd';
+import { InstagramOutlined, MenuOutlined } from '@ant-design/icons';
 
 import './Header.less';
+
+const { Link } = Typography;
 
 const menuItems = [
     {
@@ -11,12 +13,20 @@ const menuItems = [
         label: '홈',
     },
     {
+        key: '/balzzak-story',
+        label: '발짝스토리',
+    },
+    {
+        key: '/featured-menu',
+        label: '대표메뉴',
+    },
+    {
         key: '/menu',
-        label: '메뉴',
+        label: '메뉴&술',
     },
     {
         key: '/franchise',
-        label: '가맹문의',
+        label: '전수창업문의',
     },
     {
         key: '/about',
@@ -32,14 +42,14 @@ function Header() {
     
     return (
         <Layout.Header className='header-container'>
-            <a href='https://www.instagram.com/balzzak_sulzip' target='_blank'>
+            <Link onClick={() => { navigate('/'); }}>
                 <Image
                     preview={false}
                     width={136}
                     height={64}
                     src={process.env.PUBLIC_URL + '/img/balzzak-logo.png'}
                 />
-            </a>
+            </Link>
             <div className='header-pc-view'>
                 <Menu
                     defaultSelectedKeys={[location.pathname]} 
@@ -51,7 +61,10 @@ function Header() {
                 />
             </div>
             <div className='header-mobile-view'>
-                <MenuOutlined onClick={() => { setVisible(true) }} />
+                <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href='https://www.instagram.com/balzzak_sulzip' target="_blank">
+                    <InstagramOutlined />
+                </Link>
+                <MenuOutlined style={{ fontSize: 20 }} onClick={() => { setVisible(true) }} />
                 <Drawer width='75vw' className='header-mobile-drawer' placement="right" onClose={() => { setVisible(false)} } visible={visible}>
                     {
                         menuItems.map((item, index) => {

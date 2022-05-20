@@ -13,6 +13,8 @@ const MyRouter = () => {
             <Root>
                 <Routes>
                     <Route path={'/'} element={<Home />} />
+                    <Route path={'/balzzak-story'} element={<div>발짝스토리</div>} />
+                    <Route path={'/featured-menu'} element={<div>대표메뉴</div>} />
                     <Route path={'/menu'} element={<Menu />} />
                     <Route path={'/franchise'} element={<Franchise />} />
                     <Route path={'/about'} element={<About />} />       

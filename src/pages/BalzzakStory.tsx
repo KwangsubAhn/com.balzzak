@@ -1,11 +1,11 @@
 import BodyContainer from "../components/BodyContainer";
 
-function Franchise() {
+function BalzzakStory() {
     return (
         <BodyContainer>
-            전수창업문의 - To be implemented
+            발짝스토리 - To be implemented
         </BodyContainer>
     );
 }
 
-export default Franchise;
+export default BalzzakStory;

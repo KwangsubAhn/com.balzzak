@@ -1,6 +1,6 @@
 import BodyContainer from "../components/BodyContainer";
 
-function Franchise() {
+function FeaturedMenu() {
     return (
         <BodyContainer>
             전수창업문의 - To be implemented
@@ -8,4 +8,4 @@ function Franchise() {
     );
 }
 
-export default Franchise;
+export default FeaturedMenu;
