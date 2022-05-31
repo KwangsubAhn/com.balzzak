@@ -36,7 +36,7 @@ function Home() {
                         <Col xs={24} sm={16} className='home-intro-restaurant-col1' >
                             <div onClick={() => { navigate('/balzzak-story'); }}>
                                 <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise1_min.jpg" 
+                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/balzzak-outdoor.jpg" 
                                     preview={false}
                                 />
                                 <Text>발짝스토리</Text>
@@ -56,14 +56,11 @@ function Home() {
                                 <Text>창업이벤트</Text>
                             </div>
                         </Col>
-                        <Col xs={24} sm={8} style={{ display: 'flex', alignItems: 'center' }}>
+                        <Col xs={24} sm={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <div className='home-balzzak-system'>
                                 <Title style={{ marginTop: 0 }}>발짝 전수창업 안내</Title>
                                 <Paragraph>
-                                    누구나 쉽게 따라할수있는 초간단 레시피와<br />
-                                    1인매장부터 오토매장까지 일하기좋은 시스템 구축<br />
-                                    운영노하우및 경험까지 모두 전수하여<br />
-                                    성장지속 가능한 알짜매장의 창업자의 취향에따라 맟춤가게 창업<br />
+                                    누구나 쉽게 따라할수있는 초간단 레시피와 1인 매장부터 오토매장까지 일하기 좋은 시스템구축. 운영노하우 및 경험까지 모두 전수하여여 소자본 알짜매장이 가능하고 창업자의 취향에 따라 맞춤가게 설정과 본점과의 지속적인 소통과 정보로 오래가는 전수창업 
                                 </Paragraph>
                                 <Button type="primary" size={'large'} onClick={() => { navigate('/franchise'); }}>
                                     자세히 보기

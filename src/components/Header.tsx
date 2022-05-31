@@ -22,7 +22,7 @@ const menuItems = [
     },
     {
         key: '/menu',
-        label: '메뉴&술',
+        label: '메뉴판',
     },
     {
         key: '/franchise',
