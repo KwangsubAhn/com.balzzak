@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Modal, Typography } from 'antd';
-import { InstagramOutlined, MailOutlined, MessageOutlined } from '@ant-design/icons';
+import { InstagramOutlined, MailOutlined } from '@ant-design/icons';
 
 import './Footer.less';
 
@@ -35,9 +35,9 @@ function Footer() {
                     <Link href='https://www.instagram.com/balzzak_sulzip' target="_blank">
                         <InstagramOutlined />
                     </Link> 
-                    <Link href='http://pf.kakao.com/_xfWfxkb' target="_blank">
+                    {/* <Link href='http://pf.kakao.com/_xfWfxkb' target="_blank">
                         <MessageOutlined />
-                    </Link>
+                    </Link> */}
                     <Link href='mailto: conex2@naver.com' target="_blank">
                         <MailOutlined />
                     </Link>

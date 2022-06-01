@@ -12,7 +12,7 @@ function About() {
             <BodyContainer>
                 <div className='about-container'>
                     <Row>
-                        <Col sm={10} xs={24}>
+                        <Col md={10} sm={24} xs={24}>
                             <div style={{ textAlign: 'center' }}>
                                 <div>
                                     <Title className='about-title' level={2}>Welcome to <Text className='clr-pri'>발</Text><Text className='clr-sec'>짝</Text>.</Title>
@@ -49,18 +49,20 @@ function About() {
                                 </div>
                             </div>
                         </Col>
-                        <Col sm={14} xs={24}>
+                        <Col md={14} sm={24} xs={24}>
                             <div className='about-photo'>
                                 <div className='about-photo-left'>
                                     <Image 
                                         preview={false}
-                                        width={380} 
                                         src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak-view.jpg" 
                                     />  
                                     {/* <Image width={350} src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak-menu1.jpg" />   */}
                                 </div>
                                 <div className='about-photo-right'>
-                                    <Image width={300} preview={false} src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/balzzak-menu2.jpg" />  
+                                    <Image 
+                                        preview={false} 
+                                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/balzzak-menu2.jpg" 
+                                    />  
                                 </div>
                             </div>
                         </Col>
