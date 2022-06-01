@@ -7,9 +7,9 @@ function Root(props: any) {
     const { children } = props;
 
     return (
-        <MainLayout>
+        <div>
             { children }
-        </MainLayout>
+        </div>
     );
 }
 

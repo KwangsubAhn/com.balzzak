@@ -1,10 +1,13 @@
 import BodyContainer from "../components/BodyContainer";
+import MainLayout from "../layouts/MainLayout";
 
 function Franchise() {
     return (
-        <BodyContainer>
-            전수창업문의 - To be implemented
-        </BodyContainer>
+        <MainLayout>
+            <BodyContainer>
+                전수창업문의 - To be implemented
+            </BodyContainer>
+        </MainLayout>
     );
 }
 

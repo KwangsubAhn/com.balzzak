@@ -1,6 +1,7 @@
 import { Col, Row, Image, Card } from "antd";
 import BodyContainer from "../components/BodyContainer";
 import BodyTitle from "../components/BodyTitle";
+import MainLayout from "../layouts/MainLayout";
 
 import './FeaturedMenu.less';
 
@@ -94,7 +95,7 @@ const list = [
 
 function FeaturedMenu() {
     return (
-        <div>
+        <MainLayout>
             <BodyTitle text='대표메뉴' />
             <BodyContainer>
                 <div className='featured-container'>
@@ -117,7 +118,7 @@ function FeaturedMenu() {
                     </Row>
                 </div>
             </BodyContainer>
-        </div>
+        </MainLayout>
     );
 }
 

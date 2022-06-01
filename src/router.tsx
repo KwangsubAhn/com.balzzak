@@ -6,6 +6,7 @@ import FeaturedMenu from './pages/FeaturedMenu';
 import Menu from './pages/Menu';
 import Franchise from './pages/Franchise';
 import About from './pages/About';
+import BalzzakStory from './pages/BalzzakStory';
 
 const MyRouter = () => {
     return (
@@ -13,7 +14,7 @@ const MyRouter = () => {
             <Root>
                 <Routes>
                     <Route path={'/'} element={<Home />} />
-                    <Route path={'/balzzak-story'} element={<div>발짝스토리</div>} />
+                    <Route path={'/balzzak-story'} element={<BalzzakStory />} />
                     <Route path={'/featured-menu'} element={<FeaturedMenu />} />
                     <Route path={'/menu'} element={<Menu />} />
                     <Route path={'/franchise'} element={<Franchise />} />

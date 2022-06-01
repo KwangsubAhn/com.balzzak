@@ -1,32 +1,33 @@
-import { Button, Carousel, Col, Image, Modal, Row, Typography } from "antd";
+import { Button, Col, Image, Modal, Row, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
 
 import BodyContainer from "../components/BodyContainer";
+import MainLayout from "../layouts/MainLayout";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Home.less';
+
 const { Title, Paragraph, Text } = Typography;
 
 function Home() {
     const navigate = useNavigate();
     
     return (
-        <>
+        <MainLayout>
             <div className='home-carousel'>
-                <Carousel>
+                <Carousel autoPlay infiniteLoop showThumbs={false}>
                     <Image 
                         src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home1_min.jpg" 
                         preview={false}
-                        width='100%'
                     />
                     <Image 
                         src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home2_min.jpg" 
                         preview={false}
-                        width='100%'
                     />
                     <Image 
                         src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home3_min.jpg" 
                         preview={false}
-                        width='100%'
                     />
                 </Carousel>
             </div>
@@ -72,7 +73,7 @@ function Home() {
 
                 
             </BodyContainer>
-        </>
+        </MainLayout>
     );
 }
 

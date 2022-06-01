@@ -2,11 +2,12 @@ import { Image } from 'antd';
 
 import BodyContainer from "../components/BodyContainer";
 import BodyTitle from "../components/BodyTitle";
+import MainLayout from '../layouts/MainLayout';
 import './Menu.less';
 
 function Menu() {
     return (
-        <div>
+        <MainLayout>
             <BodyTitle text='메뉴판' />
             <BodyContainer >
                 <div className='menu-container'>
@@ -36,7 +37,7 @@ function Menu() {
                     </div>
                 </div>
             </BodyContainer>
-        </div>
+        </MainLayout>
     );
 }
 
