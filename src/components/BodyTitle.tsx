@@ -2,7 +2,13 @@ import { Image, Typography } from 'antd';
 
 const { Title, Paragraph, Text } = Typography;
 
-function BodyTitle() {
+interface IProps {
+    text: string;
+}
+
+function BodyTitle(props: IProps) {
+    const { text } = props;
+
     return (
         <div style={{ backgroundColor: 'black', position: 'relative' }}>
             <Image
@@ -14,7 +20,7 @@ function BodyTitle() {
             />
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: 0, height: 180, width: '100%', fontSize: 28 }}>
                 <Text style={{ color: 'white' }}>
-                    Our Menu
+                    { text }
                 </Text>
             </div>
         </div>
