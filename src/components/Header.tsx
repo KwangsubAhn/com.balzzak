@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Drawer, Image, Layout, Menu, Typography } from 'antd';
-import { InstagramOutlined, MenuOutlined } from '@ant-design/icons';
+import { InstagramOutlined, MenuOutlined, PhoneOutlined } from '@ant-design/icons';
 
 import './Header.less';
 
@@ -64,7 +64,10 @@ function Header() {
                 <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href='https://www.instagram.com/balzzak_sulzip' target="_blank">
                     <InstagramOutlined />
                 </Link>
-                <MenuOutlined style={{ fontSize: 20 }} onClick={() => { setVisible(true) }} />
+                <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href='tel:02-493-0110' target="_blank">
+                    <PhoneOutlined />
+                </Link>
+                <MenuOutlined style={{ marginLeft: 20, fontSize: 20 }} onClick={() => { setVisible(true) }} />
                 <Drawer width='75vw' className='header-mobile-drawer' placement="right" onClose={() => { setVisible(false)} } visible={visible}>
                     {
                         menuItems.map((item, index) => {

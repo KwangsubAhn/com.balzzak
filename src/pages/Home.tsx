@@ -60,8 +60,8 @@ function Home() {
                         <Col xs={24} sm={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <div className='home-balzzak-system'>
                                 <Title style={{ marginTop: 0 }}>발짝 전수창업 안내</Title>
-                                <Paragraph>
-                                    누구나 쉽게 따라할수있는 초간단 레시피와 1인 매장부터 오토매장까지 일하기 좋은 시스템구축. 운영노하우 및 경험까지 모두 전수하여여 소자본 알짜매장이 가능하고 창업자의 취향에 따라 맞춤가게 설정과 본점과의 지속적인 소통과 정보로 오래가는 전수창업 
+                                <Paragraph style={{ fontSize: 16 }}>
+                                    누구나 쉽게 따라할수있는 초간단 레시피와 1인 매장부터 오토매장까지 일하기 좋은 시스템구축. 운영노하우 및 경험까지 모두 전수하여 소자본 알짜 매장이 가능하고 창업자의 취향에 따라 맞춤가게 설정과 본점과의 지속적인 소통과 정보로 오래가는 전수창업 
                                 </Paragraph>
                                 <Button type="primary" size={'large'} onClick={() => { navigate('/franchise'); }}>
                                     자세히 보기
