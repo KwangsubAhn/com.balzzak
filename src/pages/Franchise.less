@@ -1,0 +1,39 @@
+@import '../variable.less';
+
+.franchise-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    div.ant-typography, .ant-typography p {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .franchise-col-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .franchise-col-content {
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .franchise-teaching-list {
+        .ant-typography {
+            margin: 0;
+            
+        }
+    }
+
+    @media @phone {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .franchise-col-photo {
+            .ant-image {
+                width: 100%;
+            }
+        }
+    }    
+}
+

@@ -9,7 +9,7 @@ export const FOOTER_HEIGHT = 210;
 
 function Footer() {
     const [isModalPrivacy, setIsModalPrivacy] = useState(false);
-    const [isModalEmail, setIsModalEmail] = useState(false);
+
     const setModalEmail = () => {
         Modal.info({
             title: '이메일무단수집거부',
@@ -45,8 +45,8 @@ function Footer() {
             </div>
             <div className='footer-div2'>
                 <div>
-                    <Paragraph>대표: 이상철 | 사업자등록번호: 000-00-00000</Paragraph>
-                    <Paragraph>서울특별시 중랑구 중랑역로 73 | <Link href='tel:02-493-0110'>TEL: 02-493-0110</Link></Paragraph>
+                    {/*<Paragraph>대표: 이상철 | 사업자등록번호: 000-00-00000 </Paragraph>*/}
+                    <Paragraph>서울특별시 중랑구 중랑역로 73 | <Link href='tel:02-493-0110'>TEL: 02-493-0110</Link> | 대표: 이상철</Paragraph>
                     <Paragraph>Copyright © {new Date().getFullYear()} BALZZAK SULZIP All rights Reserved.</Paragraph>
                 </div>
                 <div className='footer-div2-developer'><Text>Developed by K. Ahn</Text></div>

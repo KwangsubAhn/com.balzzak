@@ -1,11 +1,10 @@
 import { Col, Divider, Image, Row, Typography } from 'antd';
-import { italic } from 'chalk';
 import BodyContainer from "../components/BodyContainer";
 import MainLayout from "../layouts/MainLayout";
 
 import './BalzzakStory.less';
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Paragraph } = Typography;
 
 function BalzzakStory() {
     return (
@@ -15,7 +14,7 @@ function BalzzakStory() {
                     <Row>
                         <Col md={10} sm={24} xs={24}>
                             <Image 
-                                style={{ borderRadius: 15 }}
+                                style={{ borderRadius: 5 }}
                                 src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/balzzak-story.png" 
                                 preview={false}
                             />
@@ -31,7 +30,7 @@ function BalzzakStory() {
                     <Row>
                         <Col md={10} sm={24} xs={24}>
                             <Image 
-                                style={{ borderRadius: 15 }}
+                                style={{ borderRadius: 5 }}
                                 src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/story-vision.jpg" 
                                 preview={false}
                             />
