@@ -14,25 +14,25 @@ function Menu() {
                     <div className='pc-menu'>
                         <Image  
                             preview={false}
-                            src="https://public-dns.s3.ca-central-1.amazonaws.com/images/menu.png"
+                            src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/menu-pc-0615.jpg"
                         />
                     </div>
                     <div className='mobile-menu'>
                         <Image  
                             preview={false}
-                            src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/menu+1.jpg"
+                            src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/menu-mobile1-0615.jpg"
                         />
                         <Image  
                             preview={false}
-                            src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/menu+2.jpg"
+                            src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/menu-mobile2-0615.jpg"
                         />
                         <Image  
                             preview={false}
-                            src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/menu+3.jpg"
+                            src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/menu-mobile3-0615.jpg"
                         />
                         <Image  
                             preview={false}
-                            src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/menu+4.jpg"
+                            src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/menu-mobile4-0615.jpg"
                         />
                     </div>
                 </div>
