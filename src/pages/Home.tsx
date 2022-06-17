@@ -18,15 +18,15 @@ function Home() {
             <div className='home-carousel'>
                 <Carousel autoPlay infiniteLoop showThumbs={false}>
                     <Image 
-                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home1_min.jpg" 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-1.jpg" 
                         preview={false}
                     />
                     <Image 
-                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home2_min.jpg" 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-2.jpg"
                         preview={false}
                     />
                     <Image 
-                        src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/home3_min.jpg" 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-3.jpg" 
                         preview={false}
                     />
                 </Carousel>
