@@ -4,6 +4,7 @@ import { ClockCircleOutlined, PhoneOutlined } from '@ant-design/icons';
 import './About.less';
 import BodyContainer from '../components/BodyContainer';
 import MainLayout from '../layouts/MainLayout';
+import { companyInfo } from '../globalVariable';
 const { Title, Paragraph, Text, Link } = Typography;
 
 function About() {
@@ -27,9 +28,9 @@ function About() {
                                         <Text>연락처</Text>
                                     </div>
                                     <div className='about-sub-content'>
-                                        <Text>서울특별시 중랑구 중랑역로 73</Text>
-                                        <Link href='tel:02-493-0110' style={{ color: 'inherit' }}>02-493-0110</Link>
-                                        <Link href='mailto: conex2@naver.com' target="_blank" style={{ color: 'inherit' }}>conex2@naver.com</Link>
+                                        <Text>{companyInfo.address}</Text>
+                                        <Link href={`tel: ${companyInfo.phone}`} style={{ color: 'inherit' }}>{companyInfo.phone}</Link>
+                                        <Link href={`mailto: ${companyInfo.email}`} target="_blank" style={{ color: 'inherit' }}>{companyInfo.email}</Link>
                                     </div>
                                 </div>
                                 <div className='about-sub-container'>

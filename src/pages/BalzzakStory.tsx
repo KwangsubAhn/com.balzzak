@@ -1,10 +1,11 @@
 import { Col, Divider, Image, Row, Typography } from 'antd';
 import BodyContainer from "../components/BodyContainer";
+import { companyInfo } from '../globalVariable';
 import MainLayout from "../layouts/MainLayout";
 
 import './BalzzakStory.less';
 
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Link } = Typography;
 
 function BalzzakStory() {
     return (
@@ -23,7 +24,7 @@ function BalzzakStory() {
                             <Title>발짝스토리</Title>
                             <Paragraph style={{ fontSize: 16, lineHeight: '32px' }}>창업의 꿈을 갖고 있던 직장생활 7년차에 회사를 그만두고, 2016년 9월에 프렌차이즈브랜드 "건어물포차"를 창업하여 10평가게 7테이블로 장사를 시작하였습니다. 그러나 프렌차이즈 가맹점의 갑질과 아이템의 한계를 느껴 많은 노력끝에.. 새롭게 도약 하고자 1년 6개월 만에 프렌차이즈 가맹점에서 나와 그자리에서 다시 "발짝"이란 퓨전술집을 만들어 새롭게 다시 개업을 하게되었습니다.</Paragraph>
                             <Paragraph style={{ fontSize: 16, lineHeight: '32px' }}>닭발과 짝태가 우리가게의 대표메뉴 이기에 고민하다.. 발짝의 발은 닭발의 <span style={{ fontStyle: 'italic', fontWeight: 600 }}>"발"</span>. 짝은 짝태의 <span style={{ fontStyle: 'italic', fontWeight: 600 }}>"짝"</span>. 각각 한글자씩 가져와 혼합하여 스토리와 재미도 줄수있고 한번보면 깊은 인상은 줄수있는 상호를 만들게되었습니다</Paragraph>
-                            <Paragraph><b>발짝 본점</b> - 이상철<br /><b>전수창업 관련 각종 문의</b> - 010 4742 0110 </Paragraph>
+                            <Paragraph><b>발짝 본점</b> - 이상철<br /><b>전수창업 관련 각종 문의</b> - <Link href={`tel:${companyInfo.phone}`}>클릭</Link></Paragraph>
                         </Col>
                     </Row>
                     <Divider />

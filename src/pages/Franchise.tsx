@@ -1,8 +1,9 @@
 import { Col, Row, Image, Typography, Divider } from "antd";
 import BodyContainer from "../components/BodyContainer";
+import { companyInfo } from "../globalVariable";
 import MainLayout from "../layouts/MainLayout";
 import './Franchise.less';
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Link } = Typography;
 
 function Franchise() {
     return (
@@ -50,7 +51,11 @@ function Franchise() {
                             <Title level={2} style={{ marginTop: '0.5em' }}>전수비</Title>
                             <Paragraph>전수창업 선착순 10호점까지만 반값으로 진행하고 있습니다. (교육 포함 전수비는 연락주시면 안내해드리겠습니다) 그 외 모든 수수료는 없으며 다 자유입니다.</Paragraph>
                             <Paragraph>전수창업 관련 전화문의는 언제든지 가능하며, 미리 예약하시고 매장에 방문하여 음식 드시면서 1시간정도 상담도 가능합니다. (드신 음식가격만 지불 하시면 됩니다)</Paragraph>
-                            <Paragraph>발짝 전수창업 문의 010-4742-0110 발짝인스타그램 @balzzak_sulzip<br />전화나 문자나 인스타 그램 쪽지도 가능해요!!</Paragraph>
+                            <Paragraph>
+                                발짝 전수창업 문의 <Link href={`tel:${companyInfo.phone}`}>{`${companyInfo.phone}`}</Link><br /> 
+                                발짝인스타그램 <Link href={`${companyInfo.insta}`} target="_blank">@balzzak_sulzip</Link><br />
+                                전화나 문자나 인스타 그램 쪽지도 가능해요!!
+                            </Paragraph>
                         </Col>
                     </Row>
                 </div>

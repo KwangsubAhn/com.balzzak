@@ -3,6 +3,7 @@ import { Button, Modal, Typography } from 'antd';
 import { InstagramOutlined, MailOutlined } from '@ant-design/icons';
 
 import './Footer.less';
+import { companyInfo } from '../globalVariable';
 
 const { Text, Paragraph, Link } = Typography;
 export const FOOTER_HEIGHT = 210;
@@ -32,13 +33,13 @@ function Footer() {
                     <Link onClick={() => { setIsModalPrivacy(true); }}>개인정보처리방침</Link> <Text>|</Text> <Link onClick={setModalEmail}>이메일 무단수집거부</Link>
                 </div>
                 <div className='footer-div1-icons'>
-                    <Link href='https://www.instagram.com/balzzak_sulzip' target="_blank">
+                    <Link href={`${companyInfo.insta}`} target="_blank">
                         <InstagramOutlined />
                     </Link> 
                     {/* <Link href='http://pf.kakao.com/_xfWfxkb' target="_blank">
                         <MessageOutlined />
                     </Link> */}
-                    <Link href='mailto: conex2@naver.com' target="_blank">
+                    <Link href={`mailto: ${companyInfo.email}`} target="_blank">
                         <MailOutlined />
                     </Link>
                 </div>
@@ -46,7 +47,7 @@ function Footer() {
             <div className='footer-div2'>
                 <div>
                     {/*<Paragraph>대표: 이상철 | 사업자등록번호: 000-00-00000 </Paragraph>*/}
-                    <Paragraph>서울특별시 중랑구 중랑역로 73 | <Link href='tel:02-493-0110'>TEL: 02-493-0110</Link> | 대표: 이상철</Paragraph>
+                    <Paragraph>{`${companyInfo.address}`} | <Link href={`tel:${companyInfo.phone}`}>TEL: {`${companyInfo.phone}`}</Link> | 대표: 이상철</Paragraph>
                     <Paragraph>Copyright © {new Date().getFullYear()} BALZZAK SULZIP All rights Reserved.</Paragraph>
                 </div>
                 <div className='footer-div2-developer'><Text>Developed by K. Ahn</Text></div>

@@ -1,0 +1,33 @@
+@import '../variable.less';
+
+.mainlayout-container {
+    min-height: calc(100vh - 300px);
+    .mainlayout-avatar {
+        .ant-avatar-string {
+            font-size: 16px;
+            line-height: 18px !important;
+        }
+        > .ant-avatar, a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            right: 20px;
+            opacity: 0.8;
+            // background-color: @primary-color;
+        }
+        .ant-avatar {
+            background-color: @primary-color;
+        }
+        > span:nth-child(1) {
+            bottom: 100px;
+        }
+        > span:nth-child(2), a:nth-child(2) {
+            bottom: 40px;
+            
+        }
+    }
+    @media @phone {
+        
+    }
+}
