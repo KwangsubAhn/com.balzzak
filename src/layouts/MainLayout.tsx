@@ -21,7 +21,7 @@ function MainLayout(props: any) {
             <Footer />
             <div className='mainlayout-avatar'>
                 <Avatar size={52}>창업<br />문의</Avatar>
-                <Link href={`tel: ${companyInfo.phone}`}>
+                <Link href={`tel: ${companyInfo.phone2}`}>
                     <Avatar size={52} icon={<PhoneFilled />} />    
                 </Link>
             </div>
