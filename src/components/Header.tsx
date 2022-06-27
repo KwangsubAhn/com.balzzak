@@ -43,15 +43,16 @@ function Header() {
     
     return (
         <Layout.Header className='header-container'>
-            <Link onClick={() => { navigate('/'); }}>
-                <Image
-                    preview={false}
-                    width={136}
-                    height={64}
-                    src={process.env.PUBLIC_URL + '/img/balzzak-logo.png'}
-                />
-            </Link>
+            
             <div className='header-pc-view'>
+                <Link onClick={() => { navigate('/'); }}>
+                    <Image
+                        preview={false}
+                        width={136}
+                        height={64}
+                        src={process.env.PUBLIC_URL + '/img/balzzak-logo.png'}
+                    />
+                </Link>
                 <Menu
                     defaultSelectedKeys={[location.pathname]} 
                     mode="horizontal" 
@@ -62,14 +63,27 @@ function Header() {
                 />
             </div>
             <div className='header-mobile-view'>
-                <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href={companyInfo.insta} target="_blank">
-                    <InstagramOutlined />
+                <MenuOutlined style={{ fontSize: 20 }} onClick={() => { setVisible(true) }} />
+                <Link onClick={() => { navigate('/'); }}
+                    style={{ position: 'absolute', left: 'calc(50% - 68px)' }}
+                >
+                    <Image
+                        preview={false}
+                        width={136}
+                        height={64}
+                        
+                        src={process.env.PUBLIC_URL + '/img/balzzak-logo.png'}
+                    />
                 </Link>
-                <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href={`tel: ${companyInfo.phone}`} target="_blank">
-                    <PhoneOutlined />
-                </Link>
-                <MenuOutlined style={{ marginLeft: 20, fontSize: 20 }} onClick={() => { setVisible(true) }} />
-                <Drawer width='75vw' className='header-mobile-drawer' placement="right" onClose={() => { setVisible(false)} } visible={visible}>
+                <div style={{ display: 'flex' }}>
+                    <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href={companyInfo.insta} target="_blank">
+                        <InstagramOutlined />
+                    </Link>
+                    <Link style={{ display: 'flex', marginRight: 10, fontSize: 22, color: 'inherit' }} href={`tel: ${companyInfo.phone}`} target="_blank">
+                        <PhoneOutlined />
+                    </Link>
+                </div>
+                <Drawer width='75vw' className='header-mobile-drawer' placement="left" onClose={() => { setVisible(false)} } visible={visible}>
                     {
                         menuItems.map((item, index) => {
                             return <p key={index} onClick={() => { setVisible(false); navigate(item.key); }}style={{ fontSize: 18 }}>{item.label}</p>
