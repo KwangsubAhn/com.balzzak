@@ -1,0 +1,26 @@
+@import '../variable.less';
+
+.home-intro-card {
+    position: relative;
+    height: fit-content;
+    img {
+        // width: 223px;
+        object-fit: cover;
+    }
+    > span {
+        position: absolute;
+        font-size: 28px;
+        left: 28px;
+        bottom: 28px;
+        color: white;
+    }
+    @media @phone {
+        > span {
+            font-size: 13px;
+        }
+    }
+}
+
+.home-intro-card:hover {
+    cursor: pointer;
+}

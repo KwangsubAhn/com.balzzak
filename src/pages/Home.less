@@ -18,57 +18,29 @@
     .home-intro-restaurant {
         margin-top: 50px;
         margin-bottom: 50px;
+        .home-intro-mask{
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
         .home-intro-restaurant-col1 {
             display: flex;
             justify-content: center;
-            > div {
-                margin-left: 10px;
-                margin-right: 10px;
-                position: relative;
-                > span {
-                    position: absolute;
-                    font-size: 28px;
-                    left: 28px;
-                    bottom: 28px;
-                    color: white;
-                }
-            }
-            > div:hover {
-                cursor: pointer;
-            }
-            img {
-                width: 213px;
-                height: 320px;
-                object-fit: cover;
-            }
         }
     }
     .home-balzzak-system {
         width: 80%;
         text-align: center;
     }
+
     @media @phone {
+
         .home-intro-restaurant {
             margin-top: 20px;
             margin-bottom: 20px;
-            .home-intro-restaurant-col1 {
-                > div {
-                    flex: 1;
-                    margin: 0;
-                    > div {
-                        width: 100%;
-                    }
-                    > span {
-                        font-size: 16px;
-                        font-weight: 900;
-                    }
-                }
-                img {
-                    width: 100%;
-                    height: 150px;
-                    object-fit: cover;
-                }
-            }
         }
         .home-balzzak-system {
             margin-top: 20px;

@@ -7,6 +7,7 @@ import MainLayout from "../layouts/MainLayout";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Home.less';
+import HomeIntroCard from "../components/HomeIntroCard";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -34,30 +35,47 @@ function Home() {
             <BodyContainer>
                 <div className='home-container'>
                     <Row className='home-intro-restaurant'>
-                        <Col xs={24} sm={16} className='home-intro-restaurant-col1' >
-                            <div onClick={() => { navigate('/balzzak-story'); }}>
-                                <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/balzzak-outdoor.jpg" 
-                                    preview={false}
+                        <Col xs={24} sm={24} md={16} className='home-intro-restaurant-col1' >
+                            <div style={{ display: 'flex' }}>  
+                                <HomeIntroCard 
+                                    text='발짝스토리'
+                                    imgUrl='https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/home-card-1.jpg'
+                                    clickFunc={() => { navigate('/balzzak-story'); }}
                                 />
-                                <Text>발짝스토리</Text>
-                            </div>
-                            <div onClick={() => { navigate('/featured-menu'); }}>
-                                <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise2_min.jpg" 
-                                    preview={false}
+                                <HomeIntroCard 
+                                    text='대표메뉴'
+                                    imgUrl='https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/home-card-2.jpg'
+                                    clickFunc={() => { navigate('/featured-menu'); }}
                                 />
-                                <Text>대표메뉴</Text>
-                            </div>
-                            <div onClick={() => { Modal.info({ content: '[선착순 전수창업 10호점까지 전수비 반값]' }); }}>
-                                <Image 
-                                    src="https://public-dns.s3.ca-central-1.amazonaws.com/images/balzzak/franchise3_min.jpg" 
-                                    preview={false}
+                                <HomeIntroCard 
+                                    text='창업이벤트'
+                                    imgUrl='https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/home-card-3.jpg'
+                                    clickFunc={() => { Modal.info({ content: '[선착순 전수창업 10호점까지 전수비 반값]' }); }}
                                 />
-                                <Text>창업이벤트</Text>
+                                <HomeIntroCard 
+                                    text='본점월별매출'
+                                    imgUrl='https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/home-card-4.jpg'
+                                    clickFunc={() => { 
+                                        Modal.info({ 
+                                            content: 
+                                                <div>
+                                                    <p>2022년 매출 현황</p>
+                                                    <ul>
+                                                        <li>11월 2900만원</li>
+                                                        <li>10월 3200만원</li>
+                                                        <li>09월 3000만원</li>
+                                                        <li>08월 2900만원</li>
+                                                        <li>07월 3100만원</li>
+                                                        <li>06월 3000만원</li>
+                                                        <li>05월 3300만원</li>
+                                                    </ul>
+                                                </div> 
+                                        }); 
+                                    }}
+                                />
                             </div>
                         </Col>
-                        <Col xs={24} sm={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <Col xs={24} sm={24} md={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 50, marginBottom: 50 }}>
                             <div className='home-balzzak-system'>
                                 <Title style={{ marginTop: 0 }}>발짝 전수창업 안내</Title>
                                 <Paragraph style={{ fontSize: 16 }}>
