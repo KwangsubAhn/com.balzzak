@@ -9,7 +9,6 @@ const list = [
     {
         name: '감바스',
         url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/gambas.jpg'
-        
     },
     {
         name: '국물떡볶이튀김',
@@ -90,6 +89,30 @@ const list = [
     {
         name: '하이볼 3종',
         url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/하이볼 3종.jpg'
+    },
+    {
+        name: '',
+        url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/IMG_5758.jpg'
+    },
+    {
+        name: '',
+        url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/IMG_5759.jpg'
+    },
+    {
+        name: '',
+        url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/IMG_5760.jpg'
+    },
+    {
+        name: '',
+        url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/IMG_5761.jpg'
+    },
+    {
+        name: '',
+        url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/IMG_5763.jpg'
+    },
+    {
+        name: '',
+        url: 'https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/featured-menu/IMG_5764.jpg'
     }
 ]
 
@@ -109,7 +132,7 @@ function FeaturedMenu() {
                                             cover={<Image className='featured-card-img' src={item.url} />}
                                             bodyStyle={{ padding: 12, textAlign: 'center' }}
                                         >
-                                            <Card.Meta title={item.name} />
+                                            {/* <Card.Meta title={item.name} /> */}
                                         </Card>
                                     </Col>  
                                 )
