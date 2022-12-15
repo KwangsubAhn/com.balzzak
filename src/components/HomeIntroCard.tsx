@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Image, Typography } from 'antd';
 
 import './HomeIntroCard.less';

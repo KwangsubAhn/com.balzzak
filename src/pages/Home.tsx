@@ -1,6 +1,7 @@
 import { Button, Col, Image, Modal, Row, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
+import ReactPlayer from "react-player";
 
 import BodyContainer from "../components/BodyContainer";
 import MainLayout from "../layouts/MainLayout";
@@ -9,7 +10,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Home.less';
 import HomeIntroCard from "../components/HomeIntroCard";
 
-const { Title, Paragraph, Text } = Typography;
+
+const { Title, Paragraph } = Typography;
 
 function Home() {
     const navigate = useNavigate();
@@ -17,7 +19,36 @@ function Home() {
     return (
         <MainLayout>
             <div className='home-carousel'>
-                <Carousel autoPlay infiniteLoop showThumbs={false}>
+                <Carousel className='pc-only' autoPlay infiniteLoop showThumbs={false}>
+                    <Image 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-1.jpg" 
+                        preview={false}
+                    />
+                    <Image 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-2.jpg"
+                        preview={false}
+                    />
+                    <Image 
+                        src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-3.jpg" 
+                        preview={false}
+                    />
+                    <div style={{ display: 'flex', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                        <ReactPlayer 
+                            className='pc-only'
+                            url={[
+                                { src: '/video/store-view.mp4', type: 'video/mp4' },
+                            ]}
+                            width='80%' 
+                            height='80%'
+                            controls={false} 
+                            playing 
+                            loop
+                            muted
+                        />    
+                    </div>
+                    
+                </Carousel>
+                <Carousel className='mobile-only' autoPlay infiniteLoop showThumbs={false}>
                     <Image 
                         src="https://public-dns.s3.ca-central-1.amazonaws.com/com.balzzak/img/carousel-1.jpg" 
                         preview={false}
@@ -34,6 +65,20 @@ function Home() {
             </div>
             <BodyContainer>
                 <div className='home-container'>
+                    <ReactPlayer 
+                        className='mobile-only'
+                        style={{ marginTop: 20 }}
+                        url={[
+                            { src: '/video/store-view.mp4', type: 'video/mp4' },
+                        ]}
+                        width='100%' 
+                        height='260px'
+                        controls={false} 
+                        playing 
+                        loop
+                        muted
+                    />    
+                    
                     <Row className='home-intro-restaurant'>
                         <Col xs={24} sm={24} md={16} className='home-intro-restaurant-col1' >
                             <div style={{ display: 'flex' }}>  

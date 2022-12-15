@@ -9,9 +9,6 @@
     .slick-list {
         text-align: center;
     }
-    @media @phone {
-        margin-top: 0;
-    }
 }
 
 .home-container {
@@ -45,5 +42,18 @@
         .home-balzzak-system {
             margin-top: 20px;
         }
+    }
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media @phone {
+    .pc-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
     }
 }
